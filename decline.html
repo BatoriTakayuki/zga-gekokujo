@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta name="robots" content="noindex"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>古参が衰える理由｜レトロトランスポゾンの下剋上</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<nav class="site wrap" aria-label="ページ"><div class="in"><a href="index.html">まとめ</a><a href="seat.html">① 座は保存</a><a href="insertion.html">② 最初の仮説</a><a href="decline.html" aria-current="page">③ 古参の衰え</a><a href="origin.html">④ MERVL の誕生</a><a href="switch.html">⑤ スイッチの乗り換え</a><a href="methods.html">データと注意</a></div></nav>
+<div class="wrap"><main>
+<header class="page">
+  <span class="kicker">③ 古参が衰える理由</span>
+  <h1>古参は変異がたまって衰え、マウスでは動かす因子も少ない</h1>
+  <p class="lead">古いレトロトランスポゾンが働かなくなる理由を 2 つに分けて調べました。両種に共通の理由（変異がたまる）と、マウスだけの理由（古参が配列はそのままで黙っている）です。</p>
+</header>
+
+<section>
+  <div class="answer">
+    <span class="big">変異がたまって衰えるのは両種で同じ。マウスの古参は、それに加えて、動かす転写因子が少ないために黙っていると考えられる。</span>
+    <ul>
+      <li>コピーは年齢とともに働かなくなり、働く割合が半分になる年齢は、種が分かれた時期と一致する。</li>
+      <li>同じ古参コピーでも、マウスの 2 細胞期の転写はラットの約 1/3。配列の壊れ方は両種で同じ。</li>
+      <li>古参を動かす Nr5a2 は、マウスで卵子 約 1/50、2 細胞期 約 1/3。Nr5a2 の結合配列を持つ古参ほど、マウスで強く下がる。</li>
+      <li>抑制の目印（H3K9me3・H3K27me3）と抑制因子（KRAB 型ジンクフィンガー）では説明できなかった。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="stage">
+  <div class="stagehead"><span class="step">両種に共通</span><h2>変異がたまるほど働かなくなる</h2></div>
+  <p class="slide"><span class="lab">スライド用の一文</span>LTR が 2 細胞期に働ける期間は、種が分かれるまでの時間とほぼ同じ。古いコピーほど、結合配列が崩れて働かなくなる。</p>
+  <div class="two">
+<div class="stack"><figure>
+  <img src="figs/fig3.png" alt="コピーの年齢と 2 細胞期に働く割合。マウスとラットでほぼ重なり、働く割合が半分になる年齢が種の分岐とほぼ一致する。" loading="lazy">
+  <figcaption>寿命：古いコピーほど働かない。働く割合が半分になる年齢（分岐度 8〜11%）が、種が分かれた時期と一致する。</figcaption>
+  <span class="dl">保存：<a href="figs/fig3.png" download>fig3.png</a>（<a href="figs/fig3.svg" download>SVG</a>）</span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>2 細胞期に 3 読み以上、かつ受精卵・卵子の 4 倍以上に増えた LTR コピーを「働く」とした。</li><li>分岐度ごとに働くコピーの割合を出し、マウスとラットで比べた。</li></ul></details></div>
+<div class="stack"><figure>
+  <img src="figs/figR4_decline.png" alt="左：年齢とともに働くコピーの割合が下がる。右：古参の Nr5a2 型の結合配列が年齢とともに崩れる。" loading="lazy">
+  <figcaption>① 変異がたまったコピーほど働かない（両種）。② 古参（MT2B・MT2B2）の結合配列は年齢とともに崩れる（相関 ρ = −0.20〜−0.26、p &lt; 10⁻⁸）。</figcaption>
+  <span class="dl">保存：<a href="figs/figR4_decline.png" download>figR4_decline.png</a></span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>横軸の分岐度は RepeatMasker の値（元の配列からの違い＝たまった変異の量）。左が古く、右が新しい。</li><li>結合配列の強さは、JASPAR の配列パターンとの一致の最大値（1 が教科書どおり）。</li></ul></details></div>
+  </div>
+  <p class="note">「ほぼ中立な変異」かどうか（自然選択を受けていないか）は調べていません。示せたのは「変異がたまるほど働かなくなる」までです。</p>
+</section>
+
+<section class="stage">
+  <div class="stagehead"><span class="step">マウスだけ</span><h2>同じ古参でも、マウスでは黙っている</h2></div>
+  <p class="slide"><span class="lab">スライド用の一文</span>両種の同じ場所にある「双子」の古参コピーで比べると、マウスでは 2 細胞期の転写がラットの約 1/3。でも配列の壊れ方は両種で同じなので、変異のせいではない。</p>
+<div class="stack"><figure>
+  <img src="figs/figR6_rna_level.png" alt="両種の同じ古参コピーの 2 細胞期の RNA。マウスではほとんど増えず、量はラットの約 1/3。" loading="lazy">
+  <figcaption>① 同じ古参コピーでも、マウスでは 2 細胞期にほとんど増えない（1.4 倍、ラットは 4.1 倍）。② 2 細胞期の量の比（マウス ÷ ラット）は中央値で約 1/3。</figcaption>
+  <span class="dl">保存：<a href="figs/figR6_rna_level.png" download>figR6_rna_level.png</a></span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>マウスとラットの古い ERVL を、ゲノムの対応関係（UCSC の chain、mm39→rn7）で 1 対 1 に結んだ（10,106 組の「双子」）。</li><li>2 細胞期の RNA が片方でもある 1,885 組で、遺伝子全体の量で補正したうえで、マウス ÷ ラットの比を出した。</li></ul></details></div>
+<div class="stack"><figure>
+  <img src="figs/figR5_order.png" alt="左：片方の種でだけ働く古参は、ラット側が 64%。右：結合配列を失った古参の数は両種で同じ。" loading="lazy">
+  <figcaption>① 片方の種でだけ働く古参のうち、ラットでだけ働くものが 64%（p = 3×10⁻²²）。② 結合配列を失った数も、配列全体の分岐度（18.6% と 19.0%）も両種で同じ。</figcaption>
+  <span class="dl">保存：<a href="figs/figR5_order.png" download>figR5_order.png</a></span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>双子のうち、片方の種でだけ働く 1,219 組を数えた。</li><li>結合配列（Nr5a2・ESRRB・KLF4・Dux）を片方の種の系統でだけ失った古参の数を比べた。</li></ul></details></div>
+</section>
+
+<section class="stage">
+  <div class="stagehead"><span class="step">原因の候補</span><h2>動かす因子が少ない（有力）</h2></div>
+  <p class="slide"><span class="lab">スライド用の一文</span>古参のスイッチ役 Nr5a2 は、マウスでは卵子で約 1/50、2 細胞期で約 1/3。Esrrb・Sp1・Klf5・Tead も少ない。抑える側の因子（Setdb1・Dnmt3b など）の mRNA はマウスで 4〜9 倍多い。</p>
+<div class="stack"><figure>
+  <img src="figs/figR7_tf.png" alt="Nr5a2 の mRNA がマウスで大幅に少なく、動かす側の因子が少なく抑える側の因子が多い。" loading="lazy">
+  <figcaption>① 古参のスイッチ役 Nr5a2 はマウスで大幅に少ない。② マウスでは動かす側が少なく、抑える側が多い（遺伝子全体の量で補正した mRNA の比）。</figcaption>
+  <span class="dl">保存：<a href="figs/figR7_tf.png" download>figR7_tf.png</a></span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>卵子（MII）と 2 細胞期の RNA-seq で、遺伝子ごとの量（CPM）をマウスとラットで比べた。</li><li>卵子の量は「母から持ち込む分」。タンパク質の量は見ていない。</li></ul></details></div>
+  <p><b>結合配列との結びつき：</b>双子の古参のうち、Nr5a2 の結合配列を持つもの（579 組）は、マウスでの下がり方が大きかった（マウス ÷ ラットの中央値 約 1/4.9。持たないもの 856 組は 約 1/2.7、p = 6×10⁻⁷）。ESRRB の結合配列でも同じ傾向でした（p = 9×10⁻⁵）。「因子が少ない」と「その因子に頼るコピーほど下がる」がつながります。</p>
+  <p class="note">ただし Dux の結合配列を持つ古参も少し下がりやすく（p = 0.06）、結合配列どうしが一緒に並んでいる影響は分けきれていません。</p>
+</section>
+
+<section class="stage">
+  <div class="stagehead"><span class="step">否定された候補</span><h2>抑制の目印では説明できなかった</h2></div>
+  <p>最初の仮説は「マウスでは古参が H3K9me3 で抑えられたので、MERVL が取って代わった」でした。抑制の目印と抑制因子を調べました。</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>候補</th><th>データ</th><th>結果</th><th>判定</th></tr></thead>
+      <tbody>
+        <tr><td>H3K9me3（抑制の目印）</td><td>TS 細胞、マウスとラット（GSE42207）</td><td>古参は両種とも input と同じくらいで、標的になっていない</td><td><span class="pill no">支持されない</span></td></tr>
+        <tr><td>H3K9me3</td><td>マウス 2 細胞期の初め（GSE97778、Wang ら 2018）</td><td>マウスで黙っている古参にも、ほとんど付いていない（input 以下）</td><td><span class="pill no">支持されない</span></td></tr>
+        <tr><td>KRAB 型ジンクフィンガー（抑制因子）</td><td>68 種の ChIP-seq（Wolf ら 2020）</td><td>どの因子も結合は 1.1% 以下で、黙っている古参と働く古参に差がない</td><td><span class="pill no">支持されない</span></td></tr>
+        <tr><td>H3K27me3（ポリコームの目印）</td><td>2 細胞期、マウス（GSE76687）とラット（GSE163620）</td><td>マウスで黙っている古参でも 3.1% で、ゲノムのランダムな場所（16.5%）より少ない</td><td><span class="pill mid">暫定・支持されない</span></td></tr>
+        <tr><td>DNA メチル化</td><td>—</td><td>適したデータ（2 細胞期の両種比較）がなく、実施しなかった</td><td><span class="pill mid">未実施</span></td></tr>
+        <tr><td>動かす因子が少ない</td><td>卵子・2 細胞期の RNA-seq</td><td>Nr5a2 などがマウスで大幅に少なく、Nr5a2 に頼る古参ほど下がる</td><td><span class="pill ok">有力</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">H3K27me3 は、マウスの残りのデータのダウンロードが失敗したため、1 反復ずつの暫定結果です。マウスは ChIP、ラットは CUT&amp;RUN と方法が違うので、種どうしで量は比べず、それぞれの種の中でランダムな場所と比べました。精子細胞の H3K9me3（マウスとラット）は未完了です。</p>
+</section>
+
+<section class="stage">
+  <div class="stagehead"><span class="step">未決</span><h2>どちらが先か</h2></div>
+  <p>Sry の下剋上では「古いものが先に衰え、新しいものを呼ぶ」とされます。マウスの古参が黙ったのが先か、MERVL が増えたのが先かは、今のデータでは決められません。マウスで Nr5a2 が少ないことは、古参が弱った理由にも、DUX 型の MERVL が有利になった理由にもなりえます（<a href="switch.html">⑤</a>）。</p>
+</section>
+
+<div class="pager"><a href="insertion.html">← ② 最初の仮説</a><a href="origin.html">④ MERVL の誕生 →</a></div>
+</main></div>
+</body></html>

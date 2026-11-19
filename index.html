@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta name="robots" content="noindex"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>レトロトランスポゾンの下剋上</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<nav class="site wrap" aria-label="ページ"><div class="in"><a href="index.html" aria-current="page">まとめ</a><a href="seat.html">① 座は保存</a><a href="insertion.html">② 最初の仮説</a><a href="decline.html">③ 古参の衰え</a><a href="origin.html">④ MERVL の誕生</a><a href="switch.html">⑤ スイッチの乗り換え</a><a href="methods.html">データと注意</a></div></nav>
+<div class="wrap"><main>
+<header class="page">
+  <span class="kicker">下剋上進化仮説から考える ・ マウスとラットの初期胚</span>
+  <h1>なぜ生物種によって、ZGA を動かすレトロトランスポゾンは保存されていないのか</h1>
+  <p class="lead">受精卵が最初に自分の遺伝子を使い始める ZGA（接合子ゲノム活性化）は、哺乳類で広く保存されています。ところが、その ZGA を動かすレトロトランスポゾンは、種ごとにばらばらです。マウスとラットの公開データを再解析して、この食い違いを下剋上進化仮説（北里大学・伊藤研、Sry の進化）から考えました。</p>
+</header>
+
+<section>
+  <div class="answer">
+    <span class="big">ZGA を動かす「座」は保存され、そこに座るレトロトランスポゾンが、種ごとに下剋上で入れ替わるから。</span>
+    <ul>
+      <li><b>座は保存：</b>ZGA の本体（レトロトランスポゾンに頼らない遺伝子のスイッチ）は哺乳類で共通。</li>
+      <li><b>古参は衰える：</b>レトロトランスポゾンのコピーは変異がたまって衰え、働ける期間は種が分かれるまでの時間くらい。マウスでは、古参を動かす転写因子 Nr5a2 なども少ない。</li>
+      <li><b>新参が座を奪う：</b>マウスでは、MT2C_Mm の家系が DUX の結合配列を得て MERVL になり、一気に増えて主役になった。</li>
+      <li><b>その種に合ったスイッチが勝つ：</b>マウスの MERVL は DUX 型、ラットの新参は Nr5a2 型。どちらも、その種の胚に多い因子のスイッチだった。</li>
+    </ul>
+  </div>
+<div class="stack"><figure>
+  <img src="figs/fig0_model.png" alt="横軸が時間、縦軸が 2 細胞期での働きの強さ。古い ERVL がマウスで衰え、DUX の結合配列を得た MERVL が主役になる。ラットでは古い ERVL が残る。" loading="lazy">
+  <figcaption>全体のモデル図（模式図）。灰色の帯＝保存される ZGA の本体。色つきの線＝入れ替わるレトロトランスポゾン。★で MERVL が座を奪う。実測値は右端の割合だけで、線の形や交わる時期は描いたイメージ。</figcaption>
+  <span class="dl">保存：<a href="figs/fig0_model.png" download>fig0_model.png</a>（<a href="figs/fig0_model.svg" download>SVG</a>）</span>
+</figure></div>
+</section>
+
+<section>
+  <span class="kicker">話の流れ（ページごと）</span>
+  <h2>5 つの段階で答えにたどり着いた</h2>
+  <div class="cards">
+    <a class="card" href="seat.html"><span class="n">① 座は保存</span><b>ZGA の本体は保存、主役の TE は種ごとに違う</b><span class="s">共通の ZGA 遺伝子は 4 種でも上がりやすい（2.4〜4.4 倍）。2 細胞期の主役はマウスが新参 92%、ラットが古参 71%。</span></a>
+    <a class="card" href="insertion.html"><span class="n">② 最初の仮説</span><b>開いた場所に入りやすいから？ → 支持されない</b><span class="s">新しく入った MERVL は、2 細胞期に開いた場所を選んでいなかった（ランダムの 1.5 倍、有意差なし）。</span></a>
+    <a class="card" href="decline.html"><span class="n">③ 古参の衰え</span><b>古参は変異で衰え、マウスでは動かす因子も少ない</b><span class="s">同じ古参でもマウスでは転写がラットの約 1/3。配列の壊れ方は同じ。抑制の目印（H3K9me3・H3K27me3）は原因ではなかった。</span></a>
+    <a class="card" href="origin.html"><span class="n">④ MERVL の誕生</span><b>MERVL は MT2C_Mm の家系から生まれ、一気に増えた</b><span class="s">DUX の結合配列は MERVL の直前で急に現れる（0〜7% → 78% → 98%）。Dux は速く進化し、MERVL は少し弱くても働く。</span></a>
+    <a class="card" href="switch.html"><span class="n">⑤ スイッチの乗り換え</span><b>少ない因子のスイッチを捨て、DUX に乗り換えた</b><span class="s">約 9 塩基の欠失で DUX、次に Nr5a2・ESRRB を失う（92% → 6%）。コピー機を持つのは MERVL だけ（317 vs 0）。</span></a>
+    <a class="card" href="methods.html"><span class="n">データと注意</span><b>使ったデータ・言葉の定義・この答えの限界</b><span class="s">公開データの再解析で、関係は相関。図の一覧とダウンロード。</span></a>
+  </div>
+</section>
+
+<section class="stage">
+  <div class="stagehead"><span class="step">比較</span><h2>Sry の下剋上と同じところ、違うところ</h2></div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>下剋上進化仮説（Sry）</th><th>ZGA のレトロトランスポゾン</th><th>判定</th></tr></thead>
+      <tbody>
+        <tr><td>決定の座は保存、座る遺伝子は入れ替わる</td><td>ZGA の座は保存、座るレトロトランスポゾンは入れ替わる（<a href="seat.html">①</a>）</td><td><span class="pill ok">合う</span></td></tr>
+        <tr><td>最上位の遺伝子は速く進化（Sry は Sox3 の約 14 倍）</td><td>Dux はほかのホメオボックス転写因子の約 16 倍（<a href="origin.html">④</a>）</td><td><span class="pill ok">合う</span></td></tr>
+        <tr><td>閾値より上なら機能低下が許される</td><td>MERVL は DUX の結合配列を失っても 8 割が働く（<a href="origin.html">④</a>）</td><td><span class="pill ok">合う</span></td></tr>
+        <tr><td>ほぼ中立な変異で少しずつ衰える</td><td>変異がたまるほど働かなくなり、寿命は種分化の時間くらい。中立かどうかは調べていない（<a href="decline.html">③</a>）</td><td><span class="pill ok">ほぼ合う</span></td></tr>
+        <tr><td>古いものが先に衰え、新しいものを呼ぶ</td><td>マウスの古参は配列を変えずに転写が落ちていた（Nr5a2 などの不足が有力）。MERVL の増加とどちらが先かは決められない（<a href="decline.html">③</a>）</td><td><span class="pill mid">順番は未決</span></td></tr>
+        <tr><td>新しいものは生物の遺伝子から生まれる（Sry は Sox3 から）</td><td>新しいものはレトロトランスポゾン自身の家系から生まれ、自分で増える（<a href="origin.html">④</a>）</td><td><span class="pill no">違う</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>ZGA のレトロトランスポゾンは、下剋上進化仮説の枠組みにおおむね当てはまります。違いは、新しい主役が生物の遺伝子からではなく、レトロトランスポゾン自身の家系から生まれ、自分で増えて座を奪う点です。また、MERVL はマウスで不要になったわけではありません。転写を減らすと胚は胚盤胞まで育ちません（Sakashita ら 2023）。座る者は取り替えがききますが、座は空けられません。</p>
+</section>
+
+<section class="stage">
+  <div class="stagehead"><span class="step">注意</span><h2>この答えの限界</h2></div>
+  <ul class="plain">
+    <li>実験はしていません。公開データの再解析で、示せたのは相関です。</li>
+    <li>種の比較は主にマウスとラットの 2 種です（ZGA 遺伝子とレトロトランスポゾンの顔ぶれは 6 種）。</li>
+    <li>転写因子の差は mRNA の量で比べました。タンパク質の量や実際の結合は見ていません。</li>
+    <li>結合配列は配列パターンとの一致による予測です。</li>
+    <li>若い MERVL はコピーどうしがほぼ同じ配列なので、読みの割り当てがあいまいです。一意に当たった読みだけで数えると消える差は、根拠に使っていません。</li>
+  </ul>
+  <p class="note">詳しくは <a href="methods.html">データと注意</a>。</p>
+</section>
+
+<div class="pager"><span></span><a href="seat.html">① 座は保存 →</a></div>
+</main></div>
+</body></html>

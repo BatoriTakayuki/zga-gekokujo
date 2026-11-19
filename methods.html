@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta name="robots" content="noindex"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>データと注意｜レトロトランスポゾンの下剋上</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<nav class="site wrap" aria-label="ページ"><div class="in"><a href="index.html">まとめ</a><a href="seat.html">① 座は保存</a><a href="insertion.html">② 最初の仮説</a><a href="decline.html">③ 古参の衰え</a><a href="origin.html">④ MERVL の誕生</a><a href="switch.html">⑤ スイッチの乗り換え</a><a href="methods.html" aria-current="page">データと注意</a></div></nav>
+<div class="wrap"><main>
+<header class="page">
+  <span class="kicker">データと注意</span>
+  <h1>使ったデータ、言葉の決め方、この答えの限界</h1>
+  <p class="lead">すべて公開データの再解析です。新しい実験はしていません。ゲノムはマウス mm39 とラット rn7 を使いました。</p>
+</header>
+
+<section>
+  <h2>使ったデータ</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>何を見たか</th><th>データ</th><th>使ったページ</th></tr></thead>
+      <tbody>
+        <tr><td>マウス初期胚の RNA-seq（卵子〜8 細胞期）</td><td>GSE66582（Wu ら 2016）</td><td>①③④⑤</td></tr>
+        <tr><td>ラット初期胚の RNA-seq、H3K4me3・H3K27me3（CUT&amp;RUN）</td><td>GSE163620（Lu ら 2021）</td><td>①③</td></tr>
+        <tr><td>マウス 2 細胞期の ATAC-seq（B6N×DBA/2N）</td><td>GSE66581（Wu ら 2016）</td><td>②⑤</td></tr>
+        <tr><td>マウス 20 系統の構造変異（挿入配列つき）</td><td>Ferraj ら 2023</td><td>②</td></tr>
+        <tr><td>ブタ・ウシ・ウサギ・アカゲザルの初期胚</td><td>Oomen ら 2025</td><td>①</td></tr>
+        <tr><td>H3K9me3（TS 細胞、マウスとラット）</td><td>GSE42207</td><td>③</td></tr>
+        <tr><td>H3K9me3（マウス初期胚）</td><td>GSE97778（Wang ら 2018）</td><td>③⑤</td></tr>
+        <tr><td>H3K27me3（マウス 2 細胞期）</td><td>GSE76687（Zheng ら 2016）</td><td>③</td></tr>
+        <tr><td>KRAB 型ジンクフィンガー 68 種の ChIP-seq</td><td>GSE115291（Wolf ら 2020）</td><td>③⑤</td></tr>
+        <tr><td>レトロトランスポゾンの位置、種どうしの対応、結合配列</td><td>RepeatMasker（mm39・rn7）、UCSC chain mm39ToRn7、JASPAR 2024</td><td>全体</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="stage">
+  <h2>言葉の決め方</h2>
+  <ul class="plain">
+    <li><b>働く（2 細胞期に転写される）コピー：</b>2 細胞期に 3 読み以上、かつ受精卵と卵子の量の 4 倍以上。</li>
+    <li><b>年齢：</b>RepeatMasker の分岐度（元の配列からの違い＝たまった変異の量）。マウスとラットが分かれたのは分岐度 9〜10% のころ。図の年齢の軸は、左が古く右が新しい。</li>
+    <li><b>新参・古参：</b>種が分かれた後に入ったコピーが新参、分かれる前からいるコピーが古参。</li>
+    <li><b>双子のコピー：</b>マウスとラットの同じ場所にある古い ERVL（UCSC の chain で 1 対 1 に結んだ 10,106 組）。</li>
+    <li><b>結合配列：</b>JASPAR 2024 の配列パターンとの一致が 0.85 以上（主に Dux MA0611.2、Nr5A2 MA0505.3、ESRRB MA0141.4、SRF MA0083.3、KLF4 MA0039.5）。</li>
+    <li><b>一意に当たった読み：</b>ゲノムの 1 か所にだけ当たる読み（MAPQ 10 以上）。若い MERVL では少なく数えられやすい。</li>
+  </ul>
+</section>
+
+<section class="stage">
+  <h2>この答えの限界</h2>
+  <ul class="plain">
+    <li><b>相関である：</b>どの変化が原因かは、実験（たとえば Nr5a2 を増やす・減らす）では確かめていない。</li>
+    <li><b>2 種の比較：</b>入れ替わりの詳しい解析はマウスとラットだけ。ほかの 4 種は ZGA 遺伝子と主なレトロトランスポゾンの比較のみ。</li>
+    <li><b>因子の量は mRNA：</b>タンパク質の量や実際の結合（ChIP）は見ていない。結合配列も予測。</li>
+    <li><b>読みの割り当て：</b>若い MERVL はコピーどうしがほぼ同じ配列。一意に当たった読みで消える差（2 細胞期の初めの ATAC の差、MT2C_Mm での DUX の転写への効果、MERVL の中での Nr5a2 の効果）は根拠にしていない。</li>
+    <li><b>順番：</b>マウスの古参が黙ったのと MERVL が増えたのと、どちらが先かは決められない。</li>
+    <li><b>中立：</b>「ほぼ中立な変異で衰える」のうち、中立かどうかは調べていない。</li>
+  </ul>
+</section>
+
+<section class="stage">
+  <h2>まだ終わっていない解析</h2>
+  <ul class="plain">
+    <li>H3K9me3：円形精子細胞のマウスとラットの比較、マウスの受精卵・4 細胞期・ES 細胞・卵子（別のサーバーでマッピング中）。</li>
+    <li>H3K27me3：マウスの残りのデータ（Liu ら 2016 の 3 反復など）。ダウンロードが失敗したため、今は 1 反復ずつの暫定結果。</li>
+  </ul>
+</section>
+
+<section class="stage">
+  <h2>図をダウンロードする</h2>
+  <p>各図の下の「保存」リンクから、PNG（高解像度）と SVG（拡大しても粗くならない形式）を保存できます。全部まとめた ZIP：<a href="figs/zga_mervl_figs.zip" download>zga_mervl_figs.zip</a></p>
+  
+</section>
+
+<section class="stage">
+  <h2>文献</h2>
+  <ul class="plain">
+    <li>Okuyama H ら 2025, Gene（下剋上進化仮説・SRY）</li>
+    <li>Foster JW, Graves JAM 1994, PNAS（Sry は Sox3 から生まれた）</li>
+    <li>Sakashita A ら 2023, Nature Genetics（MERVL の転写を減らすと胚が育たない）</li>
+    <li>Hermant C ら 2025, Genes &amp; Development（MT2C_Mm から MERVL への DUX 結合配列の獲得）</li>
+    <li>Oomen ME ら 2025, Cell（5 種の初期胚）</li>
+    <li>Wu J ら 2016, Nature（マウス初期胚の ATAC-seq と RNA-seq）</li>
+    <li>Wang C ら 2018, Nature Cell Biology（初期胚の H3K9me3）</li>
+    <li>Wolf G ら 2020, eLife（マウスの KRAB 型ジンクフィンガー）</li>
+    <li>Ferraj A ら 2023, Cell Genomics（マウス系統の長い読みのゲノム）</li>
+  </ul>
+  <p class="note">巻・ページは未確認のものがあります。発表に使う前に原著で確かめてください。</p>
+</section>
+
+<div class="pager"><a href="switch.html">← ⑤ スイッチの乗り換え</a><span></span></div>
+</main></div>
+</body></html>

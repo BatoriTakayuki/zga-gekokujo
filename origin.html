@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta name="robots" content="noindex"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>MERVL の誕生｜レトロトランスポゾンの下剋上</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<nav class="site wrap" aria-label="ページ"><div class="in"><a href="index.html">まとめ</a><a href="seat.html">① 座は保存</a><a href="insertion.html">② 最初の仮説</a><a href="decline.html">③ 古参の衰え</a><a href="origin.html" aria-current="page">④ MERVL の誕生</a><a href="switch.html">⑤ スイッチの乗り換え</a><a href="methods.html">データと注意</a></div></nav>
+<div class="wrap"><main>
+<header class="page">
+  <span class="kicker">④ MERVL の誕生</span>
+  <h1>MERVL は MT2C_Mm の家系から生まれ、DUX の結合配列を得て一気に増えた</h1>
+  <p class="lead">新しい主役 MERVL はどこから来たのか。外から入ってきたのか、マウスにいた家系から生まれたのかを、LTR の系統樹で調べました。あわせて、入れ替わりが許される条件（速い進化と寛容）も見ました。</p>
+</header>
+
+<section>
+  <div class="answer">
+    <span class="big">MERVL は、マウスにいた MT2C_Mm と同じ家系の幹の先から生まれた。DUX の結合配列は MERVL の直前で急に現れ、その後にコピーが一気に増えた。</span>
+  </div>
+  <p class="slide"><span class="lab">スライド用の一文</span>マウスの MERVL は、MT2C_Mm と同じ家系から生まれた。家系が DUX の結合配列を獲得した直後に MERVL が一気に増え、今では 2 細胞期の LTR の読みの 92% を占める。</p>
+  <div class="two">
+<div class="stack"><figure>
+  <img src="figs/fig4b_tree.png" alt="MERVL 系 LTR の系統樹。MT2C_Mm が 1 本の幹から順に枝分かれし、MERVL が幹の先にまとまる。" loading="lazy">
+  <figcaption>系統樹：MERVL（青）は MT2C_Mm（橙）と同じ家系の幹の先から出た。「別の源から来た」形は棄却された（AU 検定 p = 6×10⁻⁵）。</figcaption>
+  <span class="dl">保存：<a href="figs/fig4b_tree.png" download>fig4b_tree.png</a></span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>MT2C_Mm・MERVL（MT2_Mm）・ラットの MT2_Rat1/2 から代表コピーを選び、外群に MT2B・MT2B2 を加えて MAFFT で並べた。</li><li>IQ-TREE で最尤法の系統樹を作り、外群で根を決めた。黒丸は支持値 95 以上の枝分かれ。</li><li>「MERVL と MT2C_Mm は別々の系統」という形に縛った樹と AU 検定で比べた。</li></ul></details></div>
+<div class="stack"><figure>
+  <img src="figs/fig4.png" alt="系統樹の幹に沿った DUX の結合配列と活性。MERVL の直前で DUX の結合配列が現れる。" loading="lazy">
+  <figcaption>DUX の結合配列は、MERVL の直前で急に現れる（0〜7% → 78% → 98%）。2 細胞期に働く割合も同時に上がる。</figcaption>
+  <span class="dl">保存：<a href="figs/fig4.png" download>fig4.png</a>（<a href="figs/fig4.svg" download>SVG</a>）</span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>系統樹で MT2C_Mm のコピーが幹から分かれた位置（根からの距離）で 4 つに分け、根元から順に並べた。左が古く、右が新しい。</li><li>各グループで、DUX の結合配列を持つコピーの割合と、2 細胞期に働くコピーの割合を出した。</li></ul></details></div>
+  </div>
+  <p><b>コピー数の急増：</b>MERVL の LTR（MT2_Mm）のコピーの約 9 割は、分岐度 0〜3% に集まっています。ごく最近、短い間に増えたことを示します。</p>
+<div class="stack"><figure>
+  <img src="figs/figP3_lineage.png" alt="系統ごとの働きの強さ。DUX の結合配列を持つ MERVL だけが突出する。" loading="lazy">
+  <figcaption>系統ごとに、DUX の結合配列を持つ割合と 2 細胞期に働く割合を並べた。DUX の結合配列を持つ MERVL だけが突出している。</figcaption>
+  <span class="dl">保存：<a href="figs/figP3_lineage.png" download>figP3_lineage.png</a></span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>古参（MT2B・MT2B2、両種）、MT2C_Mm、MERVL、ラットの MT2_Rat1・MT2_Rat2 を並べ、それぞれ DUX の結合配列を持つコピーと働くコピーの割合を出した。</li></ul></details></div>
+</section>
+
+<section class="stage">
+  <div class="stagehead"><span class="step">入れ替わりの条件</span><h2>速い進化と寛容</h2></div>
+  <p class="slide"><span class="lab">スライド用の一文</span>MERVL を動かす Dux は、ほかのホメオボックス転写因子の約 16 倍の速さで進化している（Sry は Sox3 の約 14 倍）。MERVL は DUX の結合配列を失っても 8 割が働く。少し弱くても働けるので、種ごとに別の者が座れる。</p>
+  <div class="two">
+<div class="stack"><figure>
+  <img src="figs/figP1_dnds.png" alt="dN/dS の比較。Dux 0.81、HD1 1.27、ホメオボックス転写因子 0.05、ランダムな遺伝子 0.10。" loading="lazy">
+  <figcaption>Dux は速く進化している（守られていない）。下剋上進化仮説の「最上位の遺伝子は速く進化する」に対応。</figcaption>
+  <span class="dl">保存：<a href="figs/figP1_dnds.png" download>figP1_dnds.png</a></span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>Dux（と 1 つ目のホメオドメイン HD1）の配列を種のあいだで並べ、アミノ酸を変える変異と変えない変異の比（dN/dS）を出した。</li><li>ほかのホメオボックス転写因子と、ランダムに選んだ遺伝子の dN/dS と比べた。</li></ul></details></div>
+<div class="stack"><figure>
+  <img src="figs/figP4_tolerance.png" alt="DUX の結合配列の有無と 2 細胞期に働く割合。MERVL はなしでも 80%、MT2C_Mm はなしで 32%。" loading="lazy">
+  <figcaption>閾値と寛容：MERVL は DUX の結合配列を失っても 80% が働く。MT2C_Mm は失うと 32%。</figcaption>
+  <span class="dl">保存：<a href="figs/figP4_tolerance.png" download>figP4_tolerance.png</a></span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>MERVL 系の LTR（MT2_Mm と MT2C_Mm）のコピーごとに、DUX の結合配列の有無と 2 細胞期に働くかを数えた。</li></ul></details></div>
+  </div>
+  <p class="note">若い MERVL は配列がほぼ同じなので、「DUX の結合配列がない MERVL」の読みには、隣のよく似たコピーの読みが混ざっている可能性があります（<a href="methods.html">データと注意</a>）。</p>
+</section>
+
+<section class="stage">
+  <div class="stagehead"><span class="step">次の問い</span><h2>DUX の結合配列を得たこと以外に、何が起きたのか</h2></div>
+  <p>MT2C_Mm から MERVL への変化を、結合配列・本体の遺伝子・抑制の目印まで広げて比べました。次のページ（<a href="switch.html">⑤ スイッチの乗り換え</a>）です。</p>
+</section>
+
+<div class="pager"><a href="decline.html">← ③ 古参の衰え</a><a href="switch.html">⑤ スイッチの乗り換え →</a></div>
+</main></div>
+</body></html>
