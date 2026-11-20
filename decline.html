@@ -94,6 +94,7 @@
         <tr><td>H3K9me3</td><td>円形精子細胞、マウス（GSE137742）とラット（GSE151608）</td><td>両種とも input 以下。マウスで黙っている古参に、マウス側だけ多いということはない（両種で働く古参との差 p = 0.63）</td><td><span class="pill no">支持されない</span></td></tr>
         <tr><td>KRAB 型ジンクフィンガー（抑制因子）</td><td>68 種の ChIP-seq（Wolf ら 2020）</td><td>どの因子も結合は 1.1% 以下で、黙っている古参と働く古参に差がない</td><td><span class="pill no">支持されない</span></td></tr>
         <tr><td>H3K27me3（ポリコームの目印）</td><td>2 細胞期、マウス（GSE73952、3 反復）とラット（GSE163620）</td><td>マウスで黙っている古参でも 6.8% で、ゲノムのランダムな場所（17.4%）より少ない</td><td><span class="pill no">支持されない</span></td></tr>
+        <tr><td>小さな RNA（siRNA・piRNA）で RNA を壊す</td><td>マウス・ラットの卵子（GSE200470）、マウス 2 細胞期（GSE83581）</td><td>マウスで黙っている古参に当たる反対向きの siRNA は、両種で働く古参より少ない（2 細胞期 1.9% と 4.9%）。小さな RNA が狙うのは主に MERVL</td><td><span class="pill no">支持されない</span></td></tr>
         <tr><td>DNA メチル化</td><td>—</td><td>適したデータ（2 細胞期の両種比較）がなく、実施しなかった</td><td><span class="pill mid">未実施</span></td></tr>
         <tr><td>動かす因子が少ない</td><td>卵子・2 細胞期の RNA-seq</td><td>Nr5a2 などがマウスで大幅に少なく、Nr5a2 に頼る古参ほど下がる</td><td><span class="pill ok">有力</span></td></tr>
       </tbody>
@@ -101,6 +102,18 @@
   </div>
   <p><b>活性の目印は合っていた：</b>転写を伴う目印 H3K4me3 は、マウスで黙っている古参ではマウス側で少なく（41%。両種で働く古参は 61%）、ラット側では多かった（62%）。抑える目印は付いていないのに、動かす目印が少ない。「抑えられた」のではなく「動かされていない」という見方と合います。</p>
   <p class="note">マウスは ChIP、ラットは CUT&amp;RUN と方法が違うので、種どうしで量は比べず、それぞれの種の中でランダムな場所と比べました。</p>
+</section>
+
+<section class="stage">
+  <div class="stagehead"><span class="step">発表後の追加</span><h2>小さな RNA による抑制か</h2></div>
+  <p>マウスの卵子は、哺乳類で唯一、卵子専用の Dicer（Dicer-O）で siRNA を大量に作り、TE の RNA を壊します（ラットの卵子は piRNA が中心）。「マウスだけ古参の RNA が小さな RNA で壊されている」なら、抑える印がなくても RNA が少ないことを説明できます。卵子と 2 細胞期の小さな RNA で確かめました。</p>
+<div class="stack"><figure>
+  <img src="figs/figR14_small_rna.png" alt="反対向きの小さな RNA が当たる古参コピーの割合（状態別）と、MT2C_Mm・MERVL に当たる割合。" loading="lazy">
+  <figcaption>① マウスで黙る古参に当たる siRNA は、両種で働く古参より少ない（予測と逆）。② 小さな RNA が主に当たっているのは新参の MERVL。</figcaption>
+  <span class="dl">保存：<a href="figs/figR14_small_rna.png" download>figR14_small_rna.png</a>（<a href="figs/figR14_small_rna.svg" download>SVG</a>）</span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>マウス（5 ライブラリ）とラット（3 ライブラリ）の MII 卵子の小さな RNA（Hou ら 2024）、マウス 2 細胞期（Yang ら 2016、2 ライブラリ）を、アダプターを除いて 18〜35 塩基を mm39・rn7 にマッピングした（bowtie2、ミスマッチ 1 以下）。</li><li>双子の古参のそれぞれの種のコピーに、反対向きで当たる 21〜23 塩基（siRNA）と 24〜32 塩基（piRNA）の読みを数えた。</li><li>siRNA は転写されたコピーから作られることが多いので、働くコピーほど多くなりやすい点に注意。</li></ul></details></div>
+  <p class="note">結論：古参が黙っている原因は、小さな RNA でも説明できませんでした。小さな RNA は、むしろ今の主役 MERVL を抑える側に働いている可能性があります。</p>
 </section>
 
 <section class="stage">
