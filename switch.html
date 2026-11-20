@@ -24,6 +24,7 @@
       <li><b>第 1 段階：</b>約 9 塩基の欠失で DUX の結合配列が生まれた（0% → 100%）。SRF を得て、KLF・SP 型を失った。</li>
       <li><b>第 2 段階：</b>MERVL になるとき、古参と共通の Nr5a2・ESRRB の結合配列を失った（92% → 6%）。</li>
       <li><b>増える力：</b>壊れていない本体（逆転写酵素の遺伝子）を持つコピーは MERVL が 317、MT2C_Mm は 0。</li>
+      <li><b>実測：</b>Nr5a2 は MT2C_Mm（結合配列あり）の 75% に結合し、MERVL の大半には 1% しか結合しない（図 R13）。</li>
       <li><b>種ごとの一致：</b>マウスの新参（MERVL）は DUX 型、ラットの新参（MT2_Rat）は Nr5a2 型（98%）。それぞれの胚に多い因子と一致する。</li>
     </ul>
   </div>
@@ -73,10 +74,25 @@
   <ul class="plain">
     <li><b>開き方：</b>MT2C_Mm では、Nr5a2 の結合配列があると 2 細胞期に開きやすい（年齢をそろえてオッズ比 2.0、p = 0.01）。DUX の結合配列では変わらない。</li>
     <li><b>転写：</b>MT2C_Mm では、Nr5a2 の結合配列があっても転写されやすくならない（オッズ比 0.7、有意差なし）。1 コピーあたりの RNA も同じ（0.26 と 0.27）。開くところまではいくが、転写までは届いていない。</li>
-    <li><b>DUX：</b>MT2C_Mm で DUX の結合配列があると転写されやすい（オッズ比 1.6、p = 0.001）が、一意に当たった読みだけだと差が消える。</li>
+    <li><b>DUX：</b>MT2C_Mm で DUX の結合配列があると転写されやすい（オッズ比 1.6、p = 0.001）。一意に当たった読みだけだと差が消えるが、多重マップを EM 法で配り直すと 30% → 42% で残る。</li>
     <li><b>取り分：</b>93% は「DUX あり・Nr5a2 なし」の MERVL。これはコピーが多い（全体の 59%）ことと、1 コピーがよく働くことの両方による。</li>
   </ul>
   <p class="note">MERVL の中では、全部の読みだと「DUX あり・Nr5a2 なし」の 1 コピーあたりの RNA が最も多いが、一意に当たった読みだけだと「DUX あり・Nr5a2 あり」が最も多くなる。ほぼ同じ配列のコピーの読みを 1 本ずつ分けられないためで、MERVL の中で Nr5a2 がどう効くかはこのデータでは決められない。</p>
+</section>
+
+<section class="stage">
+  <div class="stagehead"><span class="step">実測</span><h2>Nr5a2 は実際に MT2C_Mm に結合し、MERVL には結合しない</h2></div>
+  <p class="slide"><span class="lab">スライド用の一文</span>マウス 2 細胞期の Nr5a2 の結合（CUT&amp;RUN）を調べると、Nr5a2 の結合配列を持つ MT2C_Mm の 75% に結合していたが、MERVL の大半（結合配列なし、2,258 コピー）には 1% しか結合していなかった。MERVL は Nr5a2 のスイッチを実際に失っている。</p>
+<div class="stack"><figure>
+  <img src="figs/figR13_nr5a2_binding.png" alt="Nr5a2 の結合。左：MT2C_Mm と MERVL を Nr5a2 の結合配列の有無で分けた結合の割合。右：双子の古参を状態と結合配列で分けた結合の割合。" loading="lazy">
+  <figcaption>① 結合配列の予測どおりに結合する（MT2C_Mm 75% と 17%、MERVL 65% と 1%）。② 同じ結合配列を持つ双子の古参でも、両種で働くものは 62%、マウスで黙っているものは 28% しか結合していない。</figcaption>
+  <span class="dl">保存：<a href="figs/figR13_nr5a2_binding.png" download>figR13_nr5a2_binding.png</a>（<a href="figs/figR13_nr5a2_binding.svg" download>SVG</a>）</span>
+</figure>
+<details class="how"><summary>どう解析したか</summary><ul><li>マウス 2 細胞期と 8 細胞期の Nr5a2 CUT&amp;RUN（Lai ら 2023, GSE218379、各 2 反復）を mm39 にマッピングした（H3K27me3 と同じ手順）。</li><li>IgG の対照がないので、ゲノム平均から期待される断片数の 4 倍以上かつ 3 断片以上を「結合」とした。ランダムな場所は 1%、既知の標的 SINE B1 は結合配列ありで 25%。</li><li>2 反復それぞれでも、8 細胞期でも同じ傾向（MERVL の結合配列なし 0.7〜1.1%、双子の古参 62% 対 29%）。</li></ul></details></div>
+  <ul class="plain">
+    <li><b>開いているだけでは説明できない：</b>MERVL は 2 細胞期に開いていて（69%）、よく転写されているのに、Nr5a2 はほとんど結合していない。</li>
+    <li><b>マウスで黙る古参：</b>結合配列を持っていても結合が半分以下。Nr5a2 が少ないので結合しきれていない、という見方と合う（ただし、転写していないので結合しにくい、という逆向きの可能性は残る）。</li>
+  </ul>
 </section>
 
 <section class="stage">
@@ -91,7 +107,7 @@
 
 <div class="warnbox">
   <b>根拠に使わないもの</b>
-  <span>2 細胞期の初めの ATAC で「MERVL は開いていて MT2C_Mm は閉じている」（26% と 2〜3%）という差は、一意に当たった読みだけで数えると消えました。若い MERVL への読みの割り当てがあいまいなためです。この差（図 R8・R8b）は根拠に使っていません。</span>
+  <span>（転写の数字は、多重マップを EM 法で配り直しても、全部の読みとほぼ同じだった：MERVL が働く割合 87%、取り分 94.5%、1 コピーあたり MT2C_Mm の約 10 倍。）2 細胞期の初めの ATAC で「MERVL は開いていて MT2C_Mm は閉じている」（26% と 2〜3%）という差は、一意に当たった読みだけで数えると消えました。若い MERVL への読みの割り当てがあいまいなためです。この差（図 R8・R8b）は根拠に使っていません。</span>
 </div>
 
 <div class="pager"><a href="origin.html">← ④ MERVL の誕生</a><a href="methods.html">データと注意 →</a></div>
