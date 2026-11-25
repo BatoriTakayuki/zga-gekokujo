@@ -1,0 +1,148 @@
+<title>LTR 由来の遺伝子転写の分類</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+/* layout: one narrow reading column; the answer first, then the table, then the odds-ratio plot */
+:root{
+  --bg:#f7f8f6; --surface:#ffffff; --fg:#1d2420; --muted:#5d6a63; --line:#d9dfdb;
+  --mouse:#1f6f5c; --rat:#b4541f; --accent:#1f6f5c; --soft:#e7f0ec; --warn:#8a5a00; --warnbg:#fbf1dc;
+  --font-head:"IBM Plex Sans JP","Noto Sans JP",system-ui,sans-serif; --font-body:"Noto Sans JP",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101612; --surface:#18201b; --fg:#e8ede9; --muted:#9aa8a0; --line:#2b3730;
+  --mouse:#5fc3a6; --rat:#f0a070; --accent:#5fc3a6; --soft:#1b2a24; --warn:#e6bf6a; --warnbg:#2b2412; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101612; --surface:#18201b; --fg:#e8ede9; --muted:#9aa8a0; --line:#2b3730;
+  --mouse:#5fc3a6; --rat:#f0a070; --accent:#5fc3a6; --soft:#1b2a24; --warn:#e6bf6a; --warnbg:#2b2412; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);line-height:1.75;
+  padding-block:2rem 4rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:46rem;margin:0 auto;display:flex;flex-direction:column;gap:2.2rem;min-width:0}
+h1,h2{font-family:var(--font-head);line-height:1.35;text-wrap:balance;margin:0}
+h1{font-size:1.6rem} h2{font-size:1.2rem;margin-bottom:.6rem}
+p{margin:.4rem 0}
+.sub{color:var(--muted);font-size:.9rem}
+.answer{background:var(--soft);border-radius:10px;padding:1.1rem 1.2rem}
+.answer b.big{display:block;font-family:var(--font-head);font-size:1.15rem;line-height:1.5;margin-bottom:.5rem}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.9rem}
+th,td{border-bottom:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top}
+th{font-size:.8rem;color:var(--muted);font-weight:500;letter-spacing:.03em}
+td.n{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.tag{display:inline-block;font-family:var(--font-head);font-weight:700;background:var(--soft);border-radius:6px;padding:.05rem .5rem}
+.key{display:flex;flex-wrap:wrap;gap:1rem;font-size:.85rem;color:var(--muted);margin:.3rem 0 .6rem}
+.key i{display:inline-block;width:.7rem;height:.7rem;border-radius:50%;margin-right:.35rem;vertical-align:-1px}
+svg{width:100%;height:auto;display:block}
+svg text{fill:var(--fg);font-family:var(--font-body);font-size:12px}
+svg .m{fill:var(--muted)}
+svg line.grid{stroke:var(--line)} svg line.one{stroke:var(--muted);stroke-dasharray:4 3}
+ul{margin:.3rem 0;padding-left:1.2rem} li{margin:.3rem 0}
+.note{background:var(--warnbg);color:var(--fg);border-radius:10px;padding:.9rem 1.1rem;font-size:.92rem}
+.note b{color:var(--warn)}
+details{border:1px solid var(--line);border-radius:10px;padding:.7rem 1rem;background:var(--surface)}
+summary{cursor:pointer;font-weight:500}
+</style>
+
+<main>
+<header>
+  <h1>LTR 由来の遺伝子転写：マウスとラットの分類とオッズ比</h1>
+  <p class="sub">2 細胞期に LTR から転写が始まる「キメラ遺伝子」を、もう一方の種の同じ遺伝子の状態で A1〜B2 に分けて数えた結果。</p>
+</header>
+
+<section class="answer">
+  <b class="big">マウスで LTR 由来の転写をする遺伝子は、ラットでも LTR 由来の転写をする遺伝子と、偶然より約 4〜9 倍重なっていました。逆の向き（ラット→マウス）でも同じです。</b>
+  <p>同じ LTR コピーではなく、別々の LTR を使っています。遺伝子の側に、LTR 由来の転写を起こしやすい性質がある可能性があります。</p>
+</section>
+
+<section>
+  <h2>1. 分類のしかた</h2>
+  <p>「LTR 由来の遺伝子転写」とは、遺伝子の手前の LTR から RNA が作られ始め、遺伝子につながっている状態です（キメラ転写）。対になる「通常プロモーター由来の転写」は、普通のプロモーターから始まる場合です。マウスの遺伝子を、<b>ラットの同じ遺伝子</b>の状態で分けます。ラットを「LTR が入る前の状態」の代わりに使っています。</p>
+  <div class="wrap"><table>
+    <thead><tr><th>ケース</th><th>もう一方の種（ラット）の同じ遺伝子</th><th>下剋上モデルでの読み</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag">A1</span></td><td>ZGA で上がる／転写も LTR 由来</td><td>旧 LTR が機能低下し、新しい LTR が下剋上</td></tr>
+      <tr><td><span class="tag">A2</span></td><td>ZGA で上がる／転写は通常プロモーター由来</td><td>転写因子の機能低下を LTR が下剋上、または、転写因子が働くのになぜ LTR が侵入したか（要解析）</td></tr>
+      <tr><td><span class="tag">B1</span></td><td>ZGA で上がらない／転写は LTR 由来</td><td>ZGA の対象から外れていたが、LTR の侵入で ZGA に復活</td></tr>
+      <tr><td><span class="tag">B2</span></td><td>ZGA で上がらない／転写は通常プロモーター由来</td><td>新しい ZGA 遺伝子の誕生</td></tr>
+      <tr><td><span class="tag">B0</span></td><td>発現が低く（2 細胞期 5 CPM 未満）転写の由来が不明</td><td>判定できない</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>2. 遺伝子の数</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>ケース</th><th style="text-align:right">マウスのキメラ（ラットで分類）</th><th style="text-align:right">ラットのキメラ（マウスで分類）</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag">A1</span></td><td class="n">24</td><td class="n">25</td></tr>
+      <tr><td><span class="tag">A2</span></td><td class="n">73</td><td class="n">42</td></tr>
+      <tr><td><span class="tag">B1</span></td><td class="n">22</td><td class="n">21</td></tr>
+      <tr><td><span class="tag">B2</span></td><td class="n">158</td><td class="n">110</td></tr>
+      <tr><td><span class="tag">B0</span></td><td class="n">63</td><td class="n">36</td></tr>
+      <tr><th>合計</th><td class="n"><b>340</b></td><td class="n"><b>235</b></td></tr>
+    </tbody>
+  </table></div>
+  <p class="sub">2 細胞期特異的なキメラ（受精卵の 4 倍以上、2 細胞期で 3 本以上の読み）で、1:1 オルソログがある遺伝子のみ。</p>
+</section>
+
+<section>
+  <h2>3. オッズ比（偶然と比べた倍率）</h2>
+  <p>1 なら偶然と同じ、大きいほど「期待より多い」です。遺伝子の長さ、エクソン数、発現量、近くの LTR の数で補正しています。線は 95% 信頼区間です。</p>
+  <div class="key"><span><i style="background:var(--mouse)"></i>マウスのキメラ（ラットで分類）</span><span><i style="background:var(--rat)"></i>ラットのキメラ（マウスで分類）</span></div>
+  <div id="plot"></div>
+  <div class="wrap"><table>
+    <thead><tr><th>ケース</th><th style="text-align:right">マウス→ラット<br>補正後（95%CI）</th><th style="text-align:right">ラット→マウス<br>補正後（95%CI）</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag">A1</span></td><td class="n"><b>8.7</b>（5.3〜14.4）</td><td class="n"><b>9.1</b>（5.5〜15.1）</td></tr>
+      <tr><td><span class="tag">B1</span></td><td class="n"><b>4.7</b>（2.9〜7.7）</td><td class="n"><b>4.1</b>（2.5〜6.8）</td></tr>
+      <tr><td><span class="tag">A2</span></td><td class="n">1.08（0.81〜1.43）</td><td class="n">1.06（0.74〜1.51）</td></tr>
+      <tr><td><span class="tag">B2</span></td><td class="n"><b>0.49</b>（0.39〜0.62）</td><td class="n"><b>0.43</b>（0.32〜0.58）</td></tr>
+      <tr><td><span class="tag">B0</span></td><td class="n">1.66（1.08〜2.54）</td><td class="n">1.10（0.64〜1.90）</td></tr>
+    </tbody>
+  </table></div>
+  <p class="sub">補正前は、マウス→ラットが A1 11.3、B1 8.6、B2 0.99。ラット→マウスが A1 12.1、B1 7.2、B2 0.71。対象は、元の種で 2 細胞期に 1 CPM 以上の遺伝子（マウス 12,179 個、ラット 10,358 個）。</p>
+</section>
+
+<section>
+  <h2>4. わかること</h2>
+  <ul>
+    <li><b>A1 と B1 が多い。</b>両種とも、補正後も約 4〜9 倍です。片方の種のデータの偏りではなさそうです。</li>
+    <li>転写の元になる LTR は同じコピーではありません。2 細胞期特異的なキメラで、マウスとラットで同じ LTR コピーが同じ遺伝子の LTR 由来転写の元だった例は 0 でした。</li>
+    <li>したがって、祖先の LTR 由来転写が残っているというより、<b>遺伝子の側に、LTR 由来の転写を取り込みやすい性質</b>がある可能性があります。</li>
+    <li>A2 は偶然と差がなく、B2 は少なめです。「新しい ZGA 遺伝子の獲得（B2）が主役」とは言えません。</li>
+  </ul>
+</section>
+
+<section class="note">
+  <b>まだ言えないこと</b>
+  <ul>
+    <li>取り込みやすい性質の中身は、調べていません（プロモーターの種類、CpG アイランド、遺伝子の機能など）。</li>
+    <li>ラットを「LTR が入る前の状態」とみなしています。ラット側で独立に変化した可能性は、第 3 の種（ウサギ）で確認する予定で、解析中です。</li>
+    <li>A1 と B1 は遺伝子数が少なく（20〜25 個）、オッズ比が大きく出やすい点に注意が必要です。</li>
+    <li>公開データの相関で、機能の証拠はありません。B0 はマウス→ラットで 1.66、逆で 1.10 と一致せず、解釈していません。</li>
+  </ul>
+</section>
+
+<details>
+  <summary>方法（短く）</summary>
+  <p>データ：マウス 2 細胞期と受精卵（SRR1840514〜17）、ラット 2 細胞期と 1 細胞期（SRR13281434〜40）の Smart-seq2、ペアエンド。STAR でスプライス対応のアラインメント。</p>
+  <p>キメラの判定：上流のブロックが LTR（RepeatMasker、70% 以上が重なる）に入り、下流が RefSeq の既知エクソン境界に一致し、上流が同じ遺伝子の既知エクソンでない読み。2 細胞期特異的は、一意な読みが 3 本以上で、受精卵の 4 倍以上。</p>
+  <p>ZGA で上がる遺伝子：2 細胞期で 4 倍以上（受精卵・卵子より）上がる遺伝子。オッズ比は、各ケースかどうかを説明変数、キメラかどうかを結果とするロジスティック回帰。</p>
+</details>
+</main>
+
+<script>
+(function(){
+  var rows=[["A1",8.70,5.25,14.41,9.10,5.50,15.06],["B1",4.70,2.86,7.74,4.07,2.46,6.75],["A2",1.08,0.81,1.43,1.06,0.74,1.51],["B2",0.49,0.39,0.62,0.43,0.32,0.58],["B0",1.66,1.08,2.54,1.10,0.64,1.90]];
+  var W=640,H=300,L=44,R=16,T=14,B=38,lo=Math.log(0.25),hi=Math.log(20);
+  function x(v){return L+(Math.log(v)-lo)/(hi-lo)*(W-L-R);}
+  var rh=(H-T-B)/rows.length, s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="各ケースの補正後オッズ比。A1 とB1 が1より大きく、B2 が1より小さい。">';
+  [0.25,0.5,1,2,5,10,20].forEach(function(t){s+='<line class="'+(t===1?'one':'grid')+'" x1="'+x(t)+'" x2="'+x(t)+'" y1="'+T+'" y2="'+(H-B)+'"/><text class="m" x="'+x(t)+'" y="'+(H-B+16)+'" text-anchor="middle">'+t+'</text>';});
+  s+='<text class="m" x="'+(L+(W-L-R)/2)+'" y="'+(H-4)+'" text-anchor="middle">オッズ比（対数目盛り、1 = 偶然と同じ）</text>';
+  rows.forEach(function(r,i){var y=T+rh*i+rh/2;
+    s+='<text x="'+(L-8)+'" y="'+(y+4)+'" text-anchor="end" style="font-weight:700">'+r[0]+'</text>';
+    [[1,"var(--mouse)",-9],[4,"var(--rat)",9]].forEach(function(c){var o=c[0],yy=y+c[2];
+      s+='<line x1="'+x(r[o+1])+'" x2="'+x(r[o+2])+'" y1="'+yy+'" y2="'+yy+'" stroke="'+c[1]+'" stroke-width="2.5" stroke-linecap="round"/><circle cx="'+x(r[o])+'" cy="'+yy+'" r="5" fill="'+c[1]+'" stroke="var(--bg)" stroke-width="2"/>';});
+  });
+  document.getElementById('plot').innerHTML=s+'</svg>';
+})();
+</script>
